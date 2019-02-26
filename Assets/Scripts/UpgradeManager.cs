@@ -10,7 +10,12 @@ public class UpgradeManager : MonoBehaviour {
     public int count;
     public int clickPower;
     public string itemName;
-    private float _newCost;
+    private float baseCost;
+
+    void Start()
+    {
+        baseCost = cost;
+    }
 
     void Update()
     {
@@ -24,8 +29,7 @@ public class UpgradeManager : MonoBehaviour {
             click.memes -= cost;
             count += 1;
             click.memesPC += clickPower;
-            cost = Mathf.Round(cost * 1.15f);
-            _newCost = Mathf.Pow(cost, _newCost = cost);
+            cost = Mathf.Round(baseCost * Mathf.Pow(1.15f, count));
         }
     }
 }
