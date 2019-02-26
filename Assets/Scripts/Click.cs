@@ -7,7 +7,8 @@ public class Click : MonoBehaviour {
     public AudioClip bruhClip;
     public AudioSource bruhSource;
     public UnityEngine.UI.Text memeDisplay;
-    public int memes = 0;
+    public UnityEngine.UI.Text mpc;
+    public float memes = 0.00f;
     public int memesPC = 1;
 
     private void Start()
@@ -17,15 +18,17 @@ public class Click : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        memeDisplay.text = "mEmES: " + memes; 
+        memeDisplay.text = "mEmES: " + memes;
+        mpc.text = "MPC: " + memesPC;
 	}
 
     public void Clicked()
     {
-        bruhSource.Play();
+        
         memes += memesPC;
-        
-        
-        
+        bruhSource.Play();
+
+
+
     }
 }
