@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1925011244784838}
+  m_IsPrefabAsset: 1
+--- !u!1 &1925011244784838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224755235146231934}
+  - component: {fileID: 114920455672922794}
+  m_Layer: 5
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114920455672922794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925011244784838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17e993550a2f67439988ebf652c4beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: ClickSound
+    clip: {fileID: 8300000, guid: 462282c4dcabbce4cb76597dc350cb87, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 39ed28ce409d8364fb829a3c31556aab, type: 3}
+    volume: 0.26
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: KnucklesSound
+    clip: {fileID: 8300000, guid: 7a6fa5b51fd13c8488210e43dea8c3de, type: 3}
+    volume: 0.54
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: IsopodSound
+    clip: {fileID: 8300000, guid: 8b66a4da01149c34fbf12ed005c1e29c, type: 3}
+    volume: 0.31
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WillSmithSound
+    clip: {fileID: 8300000, guid: f799fcaf662c3fa43af585507592427b, type: 3}
+    volume: 0.73
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PikachuSound
+    clip: {fileID: 8300000, guid: 1c8c515617e0951488edbf89692f240c, type: 3}
+    volume: 0.53
+    pitch: 0.95
+    loop: 0
+    source: {fileID: 0}
+  - name: SuccSound
+    clip: {fileID: 8300000, guid: 0f07feff9f396124c85ad01444d87f93, type: 3}
+    volume: 0.43
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!224 &224755235146231934
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925011244784838}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 110, y: 280}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

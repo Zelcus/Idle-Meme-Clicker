@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Click : MonoBehaviour {
 
@@ -13,18 +14,21 @@ public class Click : MonoBehaviour {
     public int clickCounter = 0;
     private void Start()
     {
-
+        
     }
 
     // Update is called once per frame
-    void Update () {
-        memeDisplay.text = "mEmES: " + memes.ToString("F0");
+    private void Update () {
+
+        memeDisplay.text = "Memes: " + memes.ToString("F0");   
         mpc.text = memesPC + " Memes / Click";
         
 	}
 
     public void Clicked()
     {
+        //Switch click is played every time you click in the center and bruh sound is played every 10 click as well as a extra memes. 
+        FindObjectOfType<AudioManager>().Play("SwitchClick");
         if (clickCounter >= 10)
         {
             clickCounter = 0;
@@ -34,12 +38,15 @@ public class Click : MonoBehaviour {
         if(clickCounter == 0)
         {
             FindObjectOfType<AudioManager>().Play("ClickSound");
-            clickCounter++;
+            memes += (memes * 0.05f);
         }
-
         clickCounter++;
+    }
 
-
+    public void IsopodHour()
+    {
 
     }
+
+    
 }
