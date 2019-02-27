@@ -22,8 +22,9 @@ public class Click : MonoBehaviour {
 
         memeDisplay.text = "Memes: " + memes.ToString("F0");   
         mpc.text = memesPC + " Memes / Click";
-        
-	}
+        mps.text = memesPC + " Memes / Second";
+
+    }
 
     public void Clicked()
     {
