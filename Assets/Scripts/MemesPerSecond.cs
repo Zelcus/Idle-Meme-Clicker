@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MemesPerSecond : MonoBehaviour {
 
-    public UnityEngine.UI.Text mpsDisplay;
+    public UnityEngine.UI.Text mps;
     public Click click;
     public ItemManager[] items;
 
@@ -16,7 +16,7 @@ public class MemesPerSecond : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        mpsDisplay.text = GetMemesPerSecond() + " Memes / Second";
+        mps.text = GetMemesPerSecond() + " Memes / Second";
     }
     public float GetMemesPerSecond()
     {

@@ -20,9 +20,9 @@ public class Click : MonoBehaviour {
     // Update is called once per frame
     private void Update () {
 
-        memeDisplay.text = "Memes: " + memes.ToString("F0");   
+        memeDisplay.text = "Memes: " + CurrencyConverter.Instance.GetCurrencyIntoString(memes, false, false);   
         mpc.text = memesPC + " Memes / Click";
-        mps.text = memesPC + " Memes / Second";
+        mps.text = memesPS + " Memes / Second";
 
     }
 

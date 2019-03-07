@@ -22,7 +22,7 @@ public class ItemManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        itemInfo.text = itemName + "\nCost: " + cost + "\nMemes: " + tickValue + "/s";		
+        itemInfo.text = itemName + "\nCost: " + cost + "\nMemes: " + tickValue + "/s" + "\nX" + count;		
         if(click.memes >= cost)
         {
             GetComponent<Button>().interactable = true;

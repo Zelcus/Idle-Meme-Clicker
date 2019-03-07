@@ -23,9 +23,14 @@ public class UpgradeManager : MonoBehaviour {
     void Update()
     {
         itemInfo.text = itemName + "\nCost: " + cost + "\nClick Power: +" + clickPower;
-        if (click.memes >= cost)
+        if (click.memes >= cost && count == 0)
         {
             GetComponent<Button>().interactable = true;
+        }
+        else if(count != 0)
+        {
+            itemInfo.text = itemName + "\nIs already purchased!";
+            GetComponent<Button>().interactable = false;
         }
         else
         {
@@ -35,12 +40,12 @@ public class UpgradeManager : MonoBehaviour {
 
     public void PurchasedUpgrade()
     {
-        if (click.memes >= cost)
+        if (click.memes >= cost && count == 0)
         {
-            click.memes -= cost;
-            count++;
-            cost = Mathf.Round(baseCost * Mathf.Pow(1.15f, count));
+            click.memes -= cost;         
+            click.memesPC += clickPower;
             FindObjectOfType<AudioManager>().Play(audioName);
+            count++;
         }
         
     }
