@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UpgradeManager : MonoBehaviour {
 
+    private GameObject isActiveAndEnabled; 
     public Click click;
     public UnityEngine.UI.Text itemInfo;
     public float cost;
@@ -12,8 +13,12 @@ public class UpgradeManager : MonoBehaviour {
     public int clickPower;
     public string itemName;
     public Button button;
+    public Button activeButton;
+    public Button passiveButton;
     private float baseCost;
     public string audioName;
+    public bool hasActive = false;
+    public bool hasPassive = false;
 
     void Start()
     {
@@ -36,6 +41,8 @@ public class UpgradeManager : MonoBehaviour {
         {
             GetComponent<Button>().interactable = false;
         }
+        
+
     }
 
     public void PurchasedUpgrade()
@@ -47,6 +54,5 @@ public class UpgradeManager : MonoBehaviour {
             FindObjectOfType<AudioManager>().Play(audioName);
             count++;
         }
-        
     }
 }

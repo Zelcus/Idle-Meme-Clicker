@@ -5,6 +5,7 @@ using TMPro;
 
 public class Click : MonoBehaviour {
 
+    public EventManager[] events;
     public UnityEngine.UI.Text memeDisplay;
     public UnityEngine.UI.Text mpc;
     public UnityEngine.UI.Text mps;
@@ -44,10 +45,6 @@ public class Click : MonoBehaviour {
         clickCounter++;
     }
 
-    public void IsopodHour()
-    {
-
-    }
 
     
 }
